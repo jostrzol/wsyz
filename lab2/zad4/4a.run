@@ -1,0 +1,6 @@
+reset;
+model 4.mod;
+data 4.dat;
+minimize q_energy: energy;
+solve;
+display producted, energy;

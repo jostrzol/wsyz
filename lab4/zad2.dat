@@ -1,0 +1,143 @@
+set tasks := 
+FUND,
+A1, A2, A3, A4,
+B1, B2, B3, B4,
+C1, C2, C3, C4,
+D1, D2, D3, D4,
+E1, E2, E3, E4,
+ALEJ, ZIEL,
+OSTA
+;
+
+set dependencies :=
+	(FUND, A1)
+	(FUND, B1)
+	(FUND, C1)
+	(FUND, D1)
+
+	(A1, A2)
+	(A2, A3)
+	(A3, A4)
+
+	(B1, B2)
+	(B2, B3)
+	(B3, B4)
+
+	(A2, C1)	
+	(B2, C1)	
+	(C1, C2)
+	(C2, C3)
+	(C3, C4)
+
+	(C2, D1)
+	(D1, D2)
+	(D2, D3)
+	(D3, D4)
+
+	(C2, E1)
+	(E1, E2)
+	(E2, E3)
+	(E3, E4)
+
+	(A3, ALEJ)
+	(B3, ALEJ)
+	(C3, ALEJ)
+	(D3, ALEJ)
+	(E3, ALEJ)
+
+	(A3, ZIEL)
+	(B3, ZIEL)
+	(C3, ZIEL)
+	(D3, ZIEL)
+	(E3, ZIEL)
+
+	(ALEJ, OSTA)
+	(ZIEL, OSTA)
+	(A4, OSTA)
+	(B4, OSTA)
+	(C4, OSTA)
+	(D4, OSTA)
+	(E4, OSTA)
+;
+
+param nominal_duration :=
+	FUND	50
+	A1		60
+	A2		40
+	A3		20
+	A4		70
+	B1		50
+	B2		40
+	B3		30
+	B4		50
+	C1		50
+	C2		40
+	C3		30
+	C4		50
+	D1		70
+	D2		50
+	D3		30
+	D4		30
+	E1		70
+	E2		50
+	E3		30
+	E4		30
+	ALEJ	25
+	ZIEL	20
+	OSTA	30
+;
+param minimal_duration :=
+	FUND	50
+	A1		60
+	A2		40
+	A3		20
+	A4		70
+	B1		50
+	B2		40
+	B3		30
+	B4		50
+	C1		50
+	C2		40
+	C3		30
+	C4		50
+	D1		70
+	D2		50
+	D3		30
+	D4		30
+	E1		70
+	E2		50
+	E3		30
+	E4		30
+	ALEJ	25
+	ZIEL	20
+	OSTA	30
+;
+param n_employees :=
+	FUND	1
+	A1		25
+	A2		15
+	A3		20
+	A4		15
+	B1		10
+	B2		25
+	B3		30
+	B4		25
+	C1		10
+	C2		25
+	C3		30
+	C4		25
+	D1		20
+	D2		25
+	D3		30
+	D4		20
+	E1		20
+	E2		25
+	E3		30
+	E4		20
+	ALEJ	10
+	ZIEL	10
+	OSTA	1
+;
+
+param maximal_budget := 200000;
+param overtime_cost_per_day_employee := 150;

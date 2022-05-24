@@ -1,0 +1,5 @@
+reset;
+model ../zad2/2.mod;
+data 3.dat;
+solve;
+display transport_table;

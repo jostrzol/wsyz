@@ -1,0 +1,15 @@
+reset;
+option solver cplex;
+model zad.mod;
+data zad5.dat;
+
+set max_budgets := {0 .. 200000 by 10000};
+var total_times{max_budgets};
+
+for {m in max_budgets} {
+	let maximal_budget := m;
+	solve;
+	let total_times[m] := total_time;
+}
+
+display total_times;

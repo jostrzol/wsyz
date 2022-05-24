@@ -1,0 +1,6 @@
+reset;
+model 4.mod;
+data 4.dat;
+minimize q_total_time: total_time;
+solve;
+display producted, total_time;

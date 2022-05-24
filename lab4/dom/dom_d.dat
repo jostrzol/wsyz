@@ -1,0 +1,27 @@
+set tasks := A, B, C, D, E;
+set dependencies :=
+	(A, C)
+	(B, D)
+	(B, E)
+	(D, E);
+
+param maximal_budget := 100;
+
+param nominal_duration :=
+	A	8
+	B	17
+	C	9
+	D	16
+	E	5;
+param minimal_duration :=
+	A	7
+	B	14
+	C	5
+	D	9
+	E	4;
+param shorten_cost :=
+	A	95
+	B	75
+	C	10
+	D	65
+	E	85;

@@ -1,0 +1,20 @@
+# plik danych dla zadania planowania produkcji
+
+# definicje zbiorów indeksowych
+set SKUTERY := GL SL;
+set ODDZIALY := montownia lakiernia;
+
+# wielkoœci pracoch³onnoœci
+param praca: GL SL :=
+   montownia 2 5
+   lakiernia 3 3;
+
+# maksymalne moce oddzia³ów
+param: moc :=
+   montownia 151
+   lakiernia 181;
+
+# zyski jednostkowe
+param: cena :=
+   GL 2
+   SL 3;

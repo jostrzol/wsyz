@@ -1,0 +1,5 @@
+reset;
+model 2.mod;
+data 2.dat;
+solve;
+display transport_table;

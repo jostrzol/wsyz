@@ -1,0 +1,7 @@
+reset;
+model dom.mod;
+data dom_b.dat;
+solve;
+
+display start_time, duration, end_time, cost;
+display total_cost, total_time;

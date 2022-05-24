@@ -1,0 +1,8 @@
+reset;
+option solver cplex;
+model zad.mod;
+data zad4.dat;
+solve;
+
+display start_time, duration, end_time, cost;
+display total_cost, total_time;

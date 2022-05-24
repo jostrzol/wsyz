@@ -1,0 +1,20 @@
+set breweries := Haarlem, Eindhoven;
+set warehouses:= Amsterdam, Breda, Gouda, Amersfoort, Den_Bosch;
+
+param brew_throughputs :=
+	Haarlem 		47.23
+	Eindhoven		63.5;
+
+
+param warehouses_needs  := 
+	Amsterdam	28
+	Breda 		16
+	Gouda		22
+	Amersfoort	31
+	Den_Bosch	12;
+
+
+param transport_costs :
+ 			Amsterdam 	Breda 	Gouda 	Amersfoort 	Den_Bosch :=
+Haarlem 	131.5 		405 	188.5 	396 		485
+Eindhoven 	554 		351 	479 	366 		155.6;

@@ -1,0 +1,17 @@
+set products := prety, katowniki, ceowniki;
+
+param throughputs := 
+	prety		200
+	katowniki	140
+	ceowniki	120;
+param prices :=
+	prety		31
+	katowniki	08
+	ceowniki	64;
+param week_limits :=
+	prety		4000
+	katowniki	3000
+	ceowniki	2500;
+
+param h_per_week := 40;
+

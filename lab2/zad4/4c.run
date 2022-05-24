@@ -1,0 +1,6 @@
+reset;
+model 4.mod;
+data 4.dat;
+minimize q_longest_running_machine: longest_running_machine;
+solve;
+display producted, longest_running_machine, machine_times;

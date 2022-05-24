@@ -1,0 +1,21 @@
+set products := A, B, C;
+set machines := m1, m2, m3;
+
+param throughputs :
+		m1		m2		m3	:=
+	A	0.12	0.13	0.70
+	B	0.13	0.12	0.80
+	C	0.90	0.12	0.12;
+
+param demand :=
+	A	1000
+	B	1500
+	C	2000;
+
+param energy_per_machine :=
+	m1	3
+	m2	7
+	m3	5;
+
+
+param desired_runtime := 500;

@@ -1,0 +1,6 @@
+reset;
+option solver cplex;
+model 2b.mod;
+data 2.dat;
+solve;
+display transport_table;

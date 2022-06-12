@@ -7,7 +7,7 @@
 \usepackage{graphicx}
 \usepackage{enumitem}
 
-\title{WSYZ kolokwium 2 - rozwiązania}
+\title{WSYZ kolokwium 2, zestaw 1 - rozwiązania}
 \author{Jakub Ostrzołek}
 
 \begin{document}
@@ -17,8 +17,8 @@
 
 \subsection*{Oznaczenia}
 \begin{itemize}
-	\item $t_J \in \mathbb{N}$ - liczba godzin pracy Janusza
-	\item $t_G \in \mathbb{N}$ - liczba godzin pracy Grzegorza
+    \item $t_J \in \mathbb{N}$ - liczba godzin pracy Janusza
+    \item $t_G \in \mathbb{N}$ - liczba godzin pracy Grzegorza
 \end{itemize}
 
 \subsection*{Warunki}
@@ -33,7 +33,7 @@ $$\max{(t_J \cdot 4 + t_G \cdot 3)}$$
 
 \subsection*{Rozwiązanie graficzne}
 \begin{center}
-	\includegraphics{zad1.png}
+    \includegraphics{zad1.png}
 \end{center}
 
 \pagebreak
@@ -41,43 +41,43 @@ $$\max{(t_J \cdot 4 + t_G \cdot 3)}$$
 
 Przykładowy harmonogram
 \begin{verbatim}
-	   0000000001111111
-	   1234567891234567
-	A: XXXXX,,,,,,,,,,,
-	B: ##,,,,,,,,,,,,,,
-	C: ,,,,,####,,,,,,,
-	D: ,,,,,###,,,,,,,,
-	E: ,,,,,,,,,####,,,
-	F: ,,,,,XXXXXXXXXXX
-	G: ,,,,,#########,,
+       0000000001111111
+       1234567891234567
+    A: XXXXX,,,,,,,,,,,
+    B: ##,,,,,,,,,,,,,,
+    C: ,,,,,####,,,,,,,
+    D: ,,,,,###,,,,,,,,
+    E: ,,,,,,,,,####,,,
+    F: ,,,,,XXXXXXXXXXX
+    G: ,,,,,#########,,
 \end{verbatim}
 
 \begin{enumerate}[label=\alph*)]
-	\item $T_{min}= 17$
+    \item $T_{min}= 17$
 
-	      Zapasy całkowite
-	      \begin{itemize}
-		      \item $\Delta t_B = 3$
-		      \item $\Delta t_D = 4$
-	      \end{itemize}
+          Zapasy całkowite
+          \begin{itemize}
+              \item $\Delta t_B = 3$
+              \item $\Delta t_D = 4$
+          \end{itemize}
 
-	      Zapasy swobodne
-	      \begin{itemize}
-		      \item $\Delta t_B' = 3$
-		      \item $\Delta t_D' = 1$
-	      \end{itemize}
-	\item
-	      \begin{verbatim}
-			   0000000001111111
-			   1234567891234567
-			A: XXXXX,,,,,,,,,,,
-			B: ,,,##,,,,,,,,,,,
-			C: ,,,,,####,,,,,,,
-			D: ,,,,,,###,,,,,,,
-			E: ,,,,,,,,,####,,,
-			F: ,,,,,XXXXXXXXXXX
-			G: ,,,,,#########,,
-		   \end{verbatim}
+          Zapasy swobodne
+          \begin{itemize}
+              \item $\Delta t_B' = 3$
+              \item $\Delta t_D' = 1$
+          \end{itemize}
+    \item
+          \begin{verbatim}
+               0000000001111111
+               1234567891234567
+            A: XXXXX,,,,,,,,,,,
+            B: ,,,##,,,,,,,,,,,
+            C: ,,,,,####,,,,,,,
+            D: ,,,,,,###,,,,,,,
+            E: ,,,,,,,,,####,,,
+            F: ,,,,,XXXXXXXXXXX
+            G: ,,,,,#########,,
+           \end{verbatim}
 \end{enumerate}
 
 \section*{Zadanie 3.}
@@ -103,13 +103,13 @@ Zadany przepływ to $F=4$.
 \subsection*{Model programowania liniowego}
 \subsubsection*{Zbiory}
 \begin{itemize}
-	\item $Z = {1, 2, 3, 4}$ - zadania
-	\item $P = {1, 2, 3}$ - procesory
+    \item $Z = {1, 2, 3, 4}$ - zadania
+    \item $P = {1, 2, 3}$ - procesory
 \end{itemize}
 
 \subsubsection*{Zmienne}
 \begin{itemize}
-	\item $p_{jkl} \in \{0, 1\}$ - czy zadanie j wykonuje się na procesorze k na miejscu l-tym od końca
+    \item $p_{jkl} \in \{0, 1\}$ - czy zadanie j wykonuje się na procesorze k na miejscu l-tym od końca
 \end{itemize}
 
 \subsection*{Ograniczenia}
@@ -123,15 +123,15 @@ $$\forall j \in Z: \; \sum_{k \in P, l \in Z} p_{jkl} = 1$$
 
 \subsection*{Funkcja celu}
 $$\min{\sum_{l \in Z} l \cdot (
-		p_{12l} \cdot 10 +
-		p_{13l} \cdot 20 +
-		p_{21l} \cdot 5 +
-		p_{22l} \cdot 15 +
-		p_{24l} \cdot 25 +
-		p_{31l} \cdot 30 +
-		p_{32l} \cdot 5 +
-		p_{33l} \cdot 30 +
-		p_{34l} \cdot 35
-		) / 4}$$
+        p_{12l} \cdot 10 +
+        p_{13l} \cdot 20 +
+        p_{21l} \cdot 5 +
+        p_{22l} \cdot 15 +
+        p_{24l} \cdot 25 +
+        p_{31l} \cdot 30 +
+        p_{32l} \cdot 5 +
+        p_{33l} \cdot 30 +
+        p_{34l} \cdot 35
+        ) / 4}$$
 
 \end{document}

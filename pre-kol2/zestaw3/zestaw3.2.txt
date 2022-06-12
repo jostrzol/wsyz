@@ -1,0 +1,33 @@
+Kolokwium z POBO, strona 2
+Zestaw 80 Semestr 08L
+
+Zadanie 3.
+Przed procesorem pojawiùo siù 10 zadaù do wykonania. Czasy wykonaù poszczegùlnych zadaù podane sù w poniùeszej tabeli. Procesor moùe obsùugiwaù w danej chwili tylko jedno zadanie, w zwiùzku z czym pozostaùe zadania muszù czekaù aù siù zwolni procesor. Naleùy okreùliù takù kolejnoùù wykonania zadaù, przy ktùrej suma czasùw oczekiwania wszystkich zadaù bùdzie najmniejsza.
+
+#--------------------------------------------------------------------------#
+|xxx | zad1 | zad2 | zad3 | zad4 | zad5 | zad6 | zad7 | zad8 | zad9 | zad10|
+#--------------------------------------------------------------------------#
+|p_j |  5   |  11  |  19  |  1   |  13  |  6   |  6   |  9   |  15  |  8   |
+#--------------------------------------------------------------------------#
+
+Opytmalna kolejnoùù obsùugi na procesorze: ...
+Suma czasùw oczekiwania: ...
+
+Zadanie 4.
+W sesji egzaminacyjnej student ma 7 dni na przygotowanie siù do 3 przedmiotùw: A,B,C.
+Na naukù kaùdego z przedmiotùw moùe poùwiùciù 0,1,2 lub 3 dni. Spodziewany wynik (w punktach) w zaleùnoùci od czasu przygotowaù przedstawia poniùsza tabela.
+
+#---------#---------------------------------------------------------------#
+|xxxxxxxxx|				CZAS PRZYGOTOWAù		  |
+#---------#---------------------------------------------------------------#
+|PRZEDMIOT| 0 dni	1 dzieù		2 dni		3 dni 		  |
+#---------#---------------------------------------------------------------#
+|   A     | 0 pkt	1 pkt		3 pkt		4 pkt 		  |
+|   B     | 1 pkt	2 pkt		3 pkt		7 pkt 		  |
+|   C     | 2 pkt	6 pkt		8 pkt		9 pkt 		  |
+#---------#---------------------------------------------------------------#
+
+Naleùy okreùliù ile dni powinien siù uczyù student do przedmiotùw A,B,c aby uzyskaù z kaùdego przedmiotu co najmniej 2 punkty i sunktùw z wszystkich przedmiotùw byùa jak najwiùksza.
+
+(a) rozwiùzaù zadanie metodù programowania dynamicznego. Zdefiniowaù stany i etapy, narysowaù graf przejùù miùdzy stanami, okreùliù optymalnù trajektoriù, podaù rozwiùzanie i sumù punktùw dla tego rozwiùzania.
+(b) sformuùowac problem w postaci zadania programowania liniowego (caùkowitoliczbowego).

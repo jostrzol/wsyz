@@ -1,0 +1,88 @@
+\documentclass{report}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{polski}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\title{WSYZ kolokwium 2, zestaw 3 - rozwiązania}
+\author{Jakub Ostrzołek}
+
+\begin{document}
+\maketitle
+
+\section*{Zadanie 1}
+\subsection*{Zbiory}
+\begin{itemize}
+    \item $P = \{1, 2, 3\}$ - procesory
+    \item $Z = \{1, 2, 3, 4, 5\}$ - zadania
+\end{itemize}
+
+\subsection*{Parametry}
+\begin{itemize}
+    \item $p_{ij}, i \in P, j \in Z$ - czasy wykonania zadań
+          na poszczególnych procesorach (podana tabelka)
+\end{itemize}
+
+\subsection*{Zmienne}
+\begin{itemize}
+    \item $h_{ijk} \in \{0, 1\}, i \in P, j \in Z, k \in Z$ -
+          czy zadanie $j$ wykonuje się na procesorze $i$ w
+          kolejności $k$-tej od końca
+    \item $C_{max}$ - czas wykonywania całego zestawu
+\end{itemize}
+
+\subsection*{Ograniczenia}
+\begin{align*}
+    \sum_{i \in P, k \in Z} h_{ijk}              & = 1         &  & \forall j \in Z                  \\
+    \sum_{j \in Z} h_{ijk}                       & \le 1       &  & \forall i \in P, \forall k \in Z \\
+    \sum_{j \in Z, k \in Z} h_{ijk} \cdot p_{ij} & \le C_{max} &  & \forall i \in P                  \\
+\end{align*}
+
+\subsection*{Funkcja celu}
+$$\min{C_{max}}$$
+
+\section*{Zadanie 3}
+$$
+    Z4 \rightarrow
+    Z1 \rightarrow
+    Z6 \rightarrow
+    Z7 \rightarrow
+    Z10 \rightarrow
+    Z8 \rightarrow
+    Z2 \rightarrow
+    Z5 \rightarrow
+    Z9 \rightarrow
+    Z3
+$$
+
+\section*{Zadanie 4 b)}
+\subsection*{Zbiory}
+\begin{itemize}
+    \item $P = \{"A", "B", "C"\}$ - przedmioty
+    \item $C \in \mathbb{N} \bigcup \{0\} $ - czasy przygotowania
+\end{itemize}
+
+\subsection*{Parametry}
+\begin{itemize}
+    \item $o_{pc}, p \in P, c \in C$ - ocena za przedmiot
+          $p$ po uczeniu się przez $c$ dni (podana tabelka)
+\end{itemize}
+
+\subsection*{Zmienne}
+\begin{itemize}
+    \item $d(p) \in C$ - ile dni poświęcić na uczenie się
+          przedmiotu $p$
+\end{itemize}
+
+\subsection*{Ograniczenia}
+\begin{align*}
+    d(p)       & \le 3 &  & \forall p \in P \\
+    o_{p,d(p)} & \ge 2 &  & \forall p \in P \\
+\end{align*}
+
+\subsection*{Funkcja celu}
+$$max{ \sum_{p \in P} o_{p,d(p)}}$$
+
+\end{document}
